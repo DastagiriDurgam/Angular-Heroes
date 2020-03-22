@@ -7,6 +7,7 @@ import { HeroesComponent } from "./heroes/app.heroes";
 import { DetailsComponent } from "./details/app.details";
 import { AppRoute } from "./app.router.module";
 import { HilightHeroDirective } from './directives/hilightHeroDirective';
+import { AuthGuardService } from './authguard.service';
 
 @NgModule({
   declarations:[
@@ -14,14 +15,14 @@ import { HilightHeroDirective } from './directives/hilightHeroDirective';
     DashboardComponent,
     HeroesComponent,
     DetailsComponent,
-    HilightHeroDirective
+    HilightHeroDirective,
   ],
   imports: [
     BrowserModule,
     AppRoute
   ],
   exports:[],
-  providers:[],
+  providers:[AuthGuardService],
   bootstrap:[AppComponent]
 })
 export class AppModule{

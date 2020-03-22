@@ -2,19 +2,19 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="navbar-nav">
-    <!-- <a  class="nav-item nav-link " routerLink='/dashboard' routerLinkActive='active' (onSelectHero)="onHeroWasSelected($event)">Dashboard</a>
+    <a  class="nav-item nav-link " routerLink='/dashboard' routerLinkActive='active' (onSelectHero)="onHeroWasSelected($event)">Dashboard</a>
     <a  class="nav-item nav-link" routerLink='/heroes' routerLinkActive='active'> Heroes </a>
-    <a  class="nav-item nav-link" routerLink='/details' routerLinkActive='active'> Details </a>
-   -->
-   <a  class="nav-item nav-link " (click)='selectdTab="dashboard"' >Dashboard</a>
-   <a  class="nav-item nav-link"  (click)='selectdTab="heroes"'> Heroes </a>
+    <a  class="nav-item nav-link" [routerLink]="['/details', 1]" [queryParams]="{name:'Chiranjeevi'}" fragment="Chiru" routerLinkActive='active'> Details </a>
+  
+   <!-- <a  class="nav-item nav-link " (click)='selectdTab="dashboard"' >Dashboard</a>
+   <a  class="nav-item nav-link"  (click)='selectdTab="heroes"'> Heroes </a> -->
    <!-- <a  class="nav-item nav-link" (click)='selectdTab="details"'> Details </a> -->
 
   </div>
 </nav>
 <hr>
-<app-details [hero]="selectedHero"></app-details>
+<!-- <app-details [hero]="selectedHero"></app-details> -->
 <hr>
-<!-- <router-outlet></router-outlet> -->
-<app-dashboard *ngIf="selectdTab=='dashboard'" (selectedHero)="onHeroWasSelected($event)"></app-dashboard>
-<app-heroes *ngIf="selectdTab=='heroes'"></app-heroes>
+<router-outlet></router-outlet>
+<!-- <app-dashboard *ngIf="selectdTab=='dashboard'" (selectedHero)="onHeroWasSelected($event)"></app-dashboard>
+<app-heroes *ngIf="selectdTab=='heroes'"></app-heroes> -->

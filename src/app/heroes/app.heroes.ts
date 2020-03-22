@@ -18,7 +18,7 @@ export class HeroesComponent {
     addHero(hero) {
         if(!!hero.name && !!hero.img){
             this.heroService.addHero({
-                id: this.heroService.getID(),
+                id: this.heroService.getNewID(),
                 name: hero.name,
                 img: hero.img
             });

@@ -25,7 +25,7 @@ export class HeroService {
 
     }
 
-    getID = ()=>{
+    getNewID = ()=>{
         let maxID = 0;
         for (const hero of heroes) {
             if(hero.id > maxID){
